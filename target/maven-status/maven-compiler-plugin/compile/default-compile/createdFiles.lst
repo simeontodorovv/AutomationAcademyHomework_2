@@ -1,2 +1,3 @@
-com/example/ServicePortal.class
-com/example/LoginPage.class
+com/example/components/package-info.class
+com/example/pages/LoginPage.class
+com/example/pages/ServicePortal.class

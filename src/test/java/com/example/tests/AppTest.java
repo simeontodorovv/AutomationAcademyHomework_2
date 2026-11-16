@@ -1,33 +1,15 @@
-
-package com.example;
+package com.example.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.time.Duration;
+import com.example.base.BaseTest;
+import com.example.pages.LoginPage;
+import com.example.pages.ServicePortal;
 
-public class AppTest {
-
-    private WebDriver driver;
-
-    @BeforeEach
-    public void setUp() {
-        //ChromeOptions options = new ChromeOptions();
-
-        // options.addArguments("--headless");
-        driver = new ChromeDriver();
-        driver.get("http://localhost:5173");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
-
+public class AppTest extends BaseTest {
 
     @Test
     public void verifyAllRoles() {
@@ -53,8 +35,4 @@ public class AppTest {
         assertEquals("High", servicePortal.priority().getText());
     }
 
-    @AfterEach
-    public void tearDown() {
-        driver.quit();
-    }
 }
