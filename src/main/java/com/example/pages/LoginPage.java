@@ -13,8 +13,8 @@ public class LoginPage {
         this.driver = driver;
     }
 
-        public WebElement loginButton() { return driver.findElement(By.cssSelector("button[type='submit']") );}
-        public String getTitle() { return driver.getTitle(); }
+        private final WebElement loginButton() { return driver.findElement(By.cssSelector("button[type='submit']") );}
+        private final String getTitle() { return driver.getTitle(); }
 
         String[] types = {"Citizen", "Clerk", "Supervisor", "Field Agent", "Administrator"};
 

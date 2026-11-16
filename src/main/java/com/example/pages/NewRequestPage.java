@@ -12,21 +12,21 @@ public class NewRequestPage {
         this.driver = driver;
     }
 
-    public WebElement requestTitle() {return driver.findElement(By.name("title"));}
-    public WebElement description() {return driver.findElement(By.name("description"));}
-    public WebElement category() {return driver.findElement(By.xpath("//div[@id='mui-component-select-category']"));}
-    public WebElement categoryName(String categoryName) {return driver.findElement(By.xpath("//li[normalize-space()='"+ categoryName +"']"));}
-    public WebElement highPriority() {return driver.findElement(By.xpath("//input[@value='HIGH']"));}    
-    public WebElement next() {return driver.findElement(By.xpath("//button[normalize-space()='Next']"));}
-    public WebElement streetAddress() {return driver.findElement(By.name("streetAddress"));}
-    public WebElement city() {return driver.findElement(By.name("city"));}
-    public WebElement postCode() {return driver.findElement(By.name("postalCode"));}
-    public WebElement locationDescription() {return driver.findElement(By.name("locationText"));}
-    public WebElement email() {return driver.findElement(By.name("email"));}
-    public WebElement phone() {return driver.findElement(By.name("phone"));}
-    public WebElement termsAndConditions() {return driver.findElement(By.xpath("//input[@type='checkbox']"));}
-    public WebElement submitRequest() {return driver.findElement(By.xpath("//button[normalize-space()='Submit Request']"));}
-    public WebElement titleToCheck() {return driver.findElement(By.xpath("//div[@title='Title']"));}
+    private final WebElement requestTitle() {return driver.findElement(By.name("title"));}
+    private final WebElement description() {return driver.findElement(By.name("description"));}
+    private final WebElement category() {return driver.findElement(By.xpath("//div[@id='mui-component-select-category']"));}
+    private final WebElement categoryName(String categoryName) {return driver.findElement(By.xpath("//li[normalize-space()='"+ categoryName +"']"));}
+    private final WebElement highPriority() {return driver.findElement(By.xpath("//input[@value='HIGH']"));}    
+    private final WebElement next() {return driver.findElement(By.xpath("//button[normalize-space()='Next']"));}
+    private final WebElement streetAddress() {return driver.findElement(By.name("streetAddress"));}
+    private final WebElement city() {return driver.findElement(By.name("city"));}
+    private final WebElement postCode() {return driver.findElement(By.name("postalCode"));}
+    private final WebElement locationDescription() {return driver.findElement(By.name("locationText"));}
+    private final WebElement email() {return driver.findElement(By.name("email"));}
+    private final WebElement phone() {return driver.findElement(By.name("phone"));}
+    private final WebElement termsAndConditions() {return driver.findElement(By.xpath("//input[@type='checkbox']"));}
+    private final WebElement submitRequest() {return driver.findElement(By.xpath("//button[normalize-space()='Submit Request']"));}
+    private final WebElement titleToCheck() {return driver.findElement(By.xpath("//div[@title='Title']"));}
     public WebElement status() {return driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/span[1]"));}
     public WebElement priority() {return driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/span[1]"));}
 

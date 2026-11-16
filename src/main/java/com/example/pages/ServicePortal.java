@@ -12,8 +12,8 @@ public class ServicePortal {
         this.driver = driver;
     }
 
-    public WebElement myProfile() {return driver.findElement(By.xpath("//header[@class='MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-101k3ct-MuiPaper-root-MuiAppBar-root']//button[2]"));}
-    public WebElement logOut() {return driver.findElement(By.xpath("//li[@role='menuitem']//span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1y3ghvl-MuiTypography-root'][normalize-space()='Logout']"));}
+    private final WebElement myProfile() {return driver.findElement(By.xpath("//header[@class='MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-101k3ct-MuiPaper-root-MuiAppBar-root']//button[2]"));}
+    private final WebElement logOut() {return driver.findElement(By.xpath("//li[@role='menuitem']//span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1y3ghvl-MuiTypography-root'][normalize-space()='Logout']"));}
     public WebElement newRequest() {return driver.findElement(By.xpath("//a[normalize-space()='New Request']"));}
 
     public void LogOut() {
