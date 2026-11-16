@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import com.example.base.BaseTest;
 import com.example.pages.LoginPage;
 import com.example.pages.ServicePortal;
+import com.example.pages.NewRequestPage;
 
 public class AppTest extends BaseTest {
 
@@ -16,11 +17,13 @@ public class AppTest extends BaseTest {
 
         LoginPage loginPage = new LoginPage(driver);
         ServicePortal servicePortal = new ServicePortal(driver);
+        NewRequestPage newRequestPage = new NewRequestPage(driver);
 
         loginPage.roleButton(0).click();
         loginPage.Login();
         
-        servicePortal.SubmitRequest(
+        servicePortal.newRequest().click();
+        newRequestPage.SubmitRequest(
         "Water Leak", 
         "Here is any random description with at least 10 words", 
         "Water & Utilities", 
@@ -31,8 +34,8 @@ public class AppTest extends BaseTest {
         "monkata971@gmail.com",
         "0878629847" );
 
-        assertEquals("Submitted", servicePortal.status().getText());
-        assertEquals("High", servicePortal.priority().getText());
+        assertEquals("Submitted", newRequestPage.status().getText());
+        assertEquals("High", newRequestPage.priority().getText());
     }
 
 }
